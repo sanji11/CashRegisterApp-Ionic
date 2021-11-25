@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>History Items</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor = "let history of histories" [routerLink] = "['./', history.name]">
+      <ion-label>
+        <h2>{{history.name}}</h2>
+        <p>{{history.quantity}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
